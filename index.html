@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhagaram Education Centre | ZALT India</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-gold: #FFC107; /* From Arrow */
+            --primary-teal: #4DB6AC; /* From Arrow Fletching */
+            --dark-grey: #423F3E;   /* From ZEC Text */
+            --light-bg: #F8F9FA;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-grey);
+            line-height: 1.6;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            background: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container img {
+            height: 60px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-grey);
+            margin-left: 20px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-teal);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1523050335392-9affa7474230?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--dark-grey);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 25px;
+        }
+
+        .btn {
+            background: var(--dark-grey);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--primary-teal);
+            transform: translateY(-2px);
+        }
+
+        /* --- Services --- */
+        .section-title {
+            text-align: center;
+            margin: 50px 0 30px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: var(--primary-gold);
+            display: block;
+            margin: 10px auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 5%;
+            margin-bottom: 50px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--primary-teal);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+        }
+
+        /* --- Locations --- */
+        .locations {
+            background: var(--white);
+            padding: 50px 5%;
+        }
+
+        .loc-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .loc-card {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 8px;
+            width: 45%;
+            min-width: 300px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--dark-grey);
+            color: white;
+            padding: 50px 5% 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-content h3 {
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-teal);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #555;
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 1.8rem; }
+            .loc-card { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <img src="ZEC.jpg" alt="ZEC Logo">
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#services">Programs</a>
+            <a href="#locations">Campuses</a>
+            <a href="tel:+918072558272">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Zhagaram Academy of Learning and Teaching</h1>
+        <p>A student-focused offline learning hub dedicated to academic excellence. We empower students to strengthen fundamentals and build confidence for a brighter future.</p>
+        <a href="https://wa.me/918072558272" class="btn"><i class="fab fa-whatsapp"></i> Enroll Now</a>
+    </section>
+
+    <h2 class="section-title" id="services">Our Services</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <i class="fas fa-microscope"></i>
+            <h3>NEET & JEE</h3>
+            <p>Comprehensive coaching for medical and engineering entrance exams.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-book-reader"></i>
+            <h3>Foundation</h3>
+            <p>CBSE, ICSE & State Board tuition to strengthen school fundamentals.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-user-graduate"></i>
+            <h3>Competitive</h3>
+            <p>Expert preparation for CUET, NDA, CLAT and 15+ competitive exams.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-atom"></i>
+            <h3>STEM Classes</h3>
+            <p>Building future innovators through Science, Tech, Engineering & Math.</p>
+        </div>
+    </div>
+
+    <section class="locations" id="locations">
+        <h2 class="section-title">Visit Our Campuses</h2>
+        <div class="loc-flex">
+            <div class="loc-card">
+                <h3>Thiruvalluvar Campus</h3>
+                <p>Muthirapalayam, Puducherry</p>
+                <br>
+                <a href="https://maps.app.goo.gl/UqLbaChjNmVGP6Fj8" style="color:var(--primary-teal); font-weight:bold;">View on Google Maps</a>
+            </div>
+            <div class="loc-card">
+                <h3>Abdul Kalam Campus</h3>
+                <p>Reddiyarpalayam, Puducherry</p>
+                <br>
+                <a href="https://maps.app.goo.gl/qL9UBnEM8uYxGm4C7?g_st=ac" style="color:var(--primary-teal); font-weight:bold;">View on Google Maps</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>About ZEC</h3>
+                <p>An unit of ZALT. We provide personalized mentoring and performance-driven programs for school students.</p>
+            </div>
+            <div>
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> zaltindiaofficial@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +91 80 72 55 82 72</p>
+                <p><i class="fas fa-globe"></i> www.zaltindia.in</p>
+            </div>
+            <div>
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61557895234516&mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/zalt_india_official?igsh=Njg1NDF6enBsdzlj"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@ZALT_India"><i class="fab fa-youtube"></i></a>
+                    <a href="https://pin.it/305YJJWaO"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Zhagaram Education Centre. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
